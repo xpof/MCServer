@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MinecraftServerManager" default="compile" basedir=".">
+
+    <property name="src.dir" value="."/>
+    <property name="build.dir" value="build"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" encoding="UTF-8">
+            <include name="*.java"/>
+            <include name="Minecraft/*.java"/>
+        </javac>
+    </target>
+
+</project>
