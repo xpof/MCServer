@@ -1,0 +1,32 @@
+name: Bug Report (バグ報告)
+description: ツールの不具合やエラーに関する報告
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: バグ報告にご協力いただきありがとうございます。以下の項目に入力してください。
+  - type: textarea
+    id: description
+    attributes:
+      label: 不具合の概要
+      description: どのような問題が発生したか簡潔に記述してください。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 問題が発生する手順を箇条書きで記入してください。
+      placeholder: |
+        1. java Main を実行
+        2. サーバーが起動
+        3. 〇〇を入力するとエラーが発生
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: コンソールログ / エラーログ
+      description: コンソールに表示されたエラーメッセージを貼り付けてください。
+      render: text
